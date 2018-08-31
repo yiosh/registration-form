@@ -2,8 +2,14 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  width: 100vw;
-  height: 100vh;
+  
+}
+
+.is-main-column {
+  background-image: url("../images/AdobeStock_151000204.jpeg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  padding-bottom: .5em; 
 }
 
 .vertical-align {
@@ -12,11 +18,14 @@ body {
   align-content: center;
   height: 100vh;
 }
+.steps {
+  width: 100%;
+}
 
-/* .columns.has-vertically-aligned-content {
+.image-column {
   display: flex;
-  justify-content: center;
-} */
+  flex-direction: column;
+}
 
 .container {
   height: 100vh;
@@ -42,3 +51,37 @@ body {
 .is-selected {
   background-color: #29f571;
 }
+
+.field-label {
+  text-align: left;
+}
+
+.medium-column {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+@media only screen and (max-width: 768px) {
+
+  .container {
+    display: block;
+  }
+
+  .column {
+    padding-top: 0;
+    
+  }
+
+  .column:not(:last-child) {
+    padding-bottom: 0;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+
+  .medium-column:not(:last-child) {
+    margin-right: 1em;
+  }
+}
+
+
